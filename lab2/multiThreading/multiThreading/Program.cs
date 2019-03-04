@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.Eventing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -10,14 +11,49 @@ namespace multiThreading
 {
     class Program
     {
+        private static AutoResetEvent secondWaitsLast = new AutoResetEvent(false);
+        private static AutoResetEvent secondWaitsFourth = new AutoResetEvent(false);
+
+        private static AutoResetEvent thirdWaitsSecond = new AutoResetEvent(false);
+        private static AutoResetEvent FirstWaitsThird = new AutoResetEvent(false);
+
+
         static void Main(string[] args)
         {
-            Parallel.Invoke(() => writeNode(4), () => writeNode(5));
-            Task task2 = Task.Factory.StartNew(() => writeNode(2));
-            Task.WaitAll(task2);
-            Task task3 = Task.Factory.StartNew(() => writeNode(3));
-            Task.WaitAll(task2, task3);
-            Task task1 = Task.Factory.StartNew(() => writeNode(1));
+            new Thread(() =>
+            {
+                writeNode(5);
+                secondWaitsLast.Set();
+            }).Start();
+
+            new Thread(() =>
+            {
+                writeNode(4);
+                secondWaitsFourth.Set();
+            }).Start();
+
+            new Thread(() =>
+            {
+                secondWaitsLast.WaitOne();
+                secondWaitsFourth.WaitOne();
+                writeNode(2);
+                thirdWaitsSecond.Set();
+
+            }).Start();
+
+            new Thread(() =>
+            {
+                thirdWaitsSecond.WaitOne();
+                writeNode(3);
+                FirstWaitsThird.Set();
+            }).Start();
+
+            new Thread(() =>
+            {
+                FirstWaitsThird.WaitOne();
+                writeNode(1);
+            }).Start();
+
 
             Console.ReadKey();
         }
