@@ -1,4 +1,4 @@
-# Laboratory Work nr.2
+# Laboratory Work nr.3
 ## Http Protocol
 ## Http Methods: 
 1. GET - Request to read a web page  
