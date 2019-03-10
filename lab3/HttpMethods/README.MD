@@ -4,12 +4,12 @@
 1. GET - Request to read a web page  
   ![alt text](https://github.com/Arina29/PR_Labs/blob/master/lab3/screens/get.PNG "Logo Title Text 1") 
 2. PUT - Request to store a web page  
-  ![alt text](screens/put.PNG "Logo Title Text 1") 
+  ![alt text](https://github.com/Arina29/PR_Labs/blob/master/lab3/screens/put.PNG "Logo Title Text 1") 
 3. POST - Append to a named resource  
-  ![alt text](screens/Post.PNG "Logo Title Text 1") 
+  ![alt text](https://github.com/Arina29/PR_Labs/blob/master/lab3/screens/post.PNG "Logo Title Text 1") 
 4. PATCH - Applies partial modifications to a resource.  
-  ![alt text](screens/Patch.PNG "Logo Title Text 1") 
+  ![alt text](https://github.com/Arina29/PR_Labs/blob/master/lab3/screens/patch.PNG "Logo Title Text 1") 
 5. DELETE - Deletes the specified resource.  
-  ![alt text](screens/Delete.PNG "Logo Title Text 1") 
+  ![alt text](https://github.com/Arina29/PR_Labs/blob/master/lab3/screens/delete.PNG "Logo Title Text 1") 
 
   
