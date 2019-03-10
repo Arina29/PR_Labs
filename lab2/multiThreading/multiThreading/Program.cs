@@ -13,7 +13,6 @@ namespace multiThreading
     {
         private static AutoResetEvent secondWaitsLast = new AutoResetEvent(false);
         private static AutoResetEvent secondWaitsFourth = new AutoResetEvent(false);
-
         private static AutoResetEvent thirdWaitsSecond = new AutoResetEvent(false);
         private static AutoResetEvent FirstWaitsThird = new AutoResetEvent(false);
 
@@ -34,15 +33,6 @@ namespace multiThreading
 
             new Thread(() =>
             {
-                secondWaitsLast.WaitOne();
-                secondWaitsFourth.WaitOne();
-                writeNode(2);
-                thirdWaitsSecond.Set();
-
-            }).Start();
-
-            new Thread(() =>
-            {
                 thirdWaitsSecond.WaitOne();
                 writeNode(3);
                 FirstWaitsThird.Set();
@@ -53,6 +43,17 @@ namespace multiThreading
                 FirstWaitsThird.WaitOne();
                 writeNode(1);
             }).Start();
+
+            new Thread(() =>
+            {
+                secondWaitsLast.WaitOne();
+                secondWaitsFourth.WaitOne();
+                writeNode(2);
+                thirdWaitsSecond.Set();
+
+            }).Start();
+
+       
 
 
             Console.ReadKey();
