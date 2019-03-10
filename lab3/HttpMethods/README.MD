@@ -1,15 +1,15 @@
 # Laboratory Work nr.2
 ## Http Protocol
 ## Http Methods: 
-1. GET - Request to read a web page
-  ![alt text](screens/get.PNG "Logo Title Text 1") 
-2. PUT - Request to store a web page
+1. GET - Request to read a web page  
+  ![alt text](https://github.com/Arina29/PR_Labs/blob/master/lab3/screens/get.PNG "Logo Title Text 1") 
+2. PUT - Request to store a web page  
   ![alt text](screens/put.PNG "Logo Title Text 1") 
-3. POST - Append to a named resource
+3. POST - Append to a named resource  
   ![alt text](screens/Post.PNG "Logo Title Text 1") 
-4. PATCH - Applies partial modifications to a resource.
+4. PATCH - Applies partial modifications to a resource.  
   ![alt text](screens/Patch.PNG "Logo Title Text 1") 
-5. DELETE - Deletes the specified resource.
+5. DELETE - Deletes the specified resource.  
   ![alt text](screens/Delete.PNG "Logo Title Text 1") 
 
   
