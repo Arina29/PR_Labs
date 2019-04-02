@@ -1,6 +1,4 @@
 # Laboratory Work nr.4
-## Tasks 
-1.  
 ## SMTP/POP3 protocols
 *_SMTP_*(Simple Mail Transfer Protocol) is a simple ASCII protocol. SMTP works in this way: After establishing TCP connection to port 25, the client machine waits for the receiving machine operating. The receiving machine starts by sending a line of text giving its identity
 and telling whether it is prepared to receive mail. If it's not, then the  client releases the connection and tries again later.
