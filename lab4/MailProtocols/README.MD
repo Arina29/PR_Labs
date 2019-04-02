@@ -14,6 +14,8 @@ For sending messages using SMTP, I hacve used *SmtpClient* and for  creating the
   ![alt text](screens/mailResult.PNG "Logo Title Text 1") 
   
  For Studying POP3 , I downloaded *OpenPop.Net* from Nuget, and created a function that takes the headers of a certain number of mail messages
+   ![alt text](screens/pop3.PNG "Logo Title Text 1") 
+
  ```csharp
   public Dictionary<int, string> Pop3(int messageNr)
         {
@@ -34,8 +36,9 @@ For sending messages using SMTP, I hacve used *SmtpClient* and for  creating the
 
             return headers;
         }
-     ```
-  ![alt text](screens/pop3.PNG "Logo Title Text 1") 
+     ``` 
+    
+     
 
 
 
