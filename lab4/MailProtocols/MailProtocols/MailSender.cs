@@ -57,6 +57,7 @@ namespace MailProtocols
                 htmlView.LinkedResources.Add(image);
                 mailMessage.AlternateViews.Add(htmlView);
             }
+            smtp.
             else
                 mailMessage.Body = message;
             if(attachementPath != null)
