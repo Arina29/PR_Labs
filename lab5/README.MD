@@ -1,14 +1,14 @@
 # Laboratory Work nr.5
 ## Sockets. TCP/IP and UDP Protocols
-*TCP* – is for connection orientated applications. It has built in error checking and will re transmit missing packets.
-*UDP* – is for connection less applications. It has no has built in error checking and will not re transmit missing packets.
+1.*TCP* – is for connection orientated applications. It has built in error checking and will re transmit missing packets.   
+2.*UDP* – is for connection less applications. It has no has built in error checking and will not re transmit missing packets.   
 After a connection between the server and client, i.e., the server process and the client process is established, 
 they can communicate for the purpose of exchanging data using sockets.A socket is the end point of a bi-directional communication
-between two processes running over a network.   
-In C# in order to use the TCP Protocol you  declare a socket in this way: 
-*var _socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);*  
-In case of UDP Protocol: 
-*var _socket = new Socket(AddressFamily.InterNetwork, SocketType.DGram, ProtocolType.Udp);*  
+between two processes running over a network.     
+In C# in order to use the TCP Protocol you  declare a socket in this way:   
+*var _socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);*    
+In case of UDP Protocol:    
+*var _socket = new Socket(AddressFamily.InterNetwork, SocketType.DGram, ProtocolType.Udp);*    
 Also in case of UDP you don't have to use BeginAccept, but theoretically the main difference between these two types of protocols is:
 When an app uses UDP, packets are just sent to the recipient. The sender doesn’t wait to make sure the recipient received the packet—it 
 just continues sending the next packets. If the recipient misses a few UDP packets here and there, they are just lost—the sender won’t 
