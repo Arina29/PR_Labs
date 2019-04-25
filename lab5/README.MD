@@ -21,6 +21,7 @@ Let's talk about the process when admin sends a message, we make a for loop to i
 ![alt text](screens/groupChat.PNG "Logo Title Text 1")   
 ![alt text](screens/menu.png "Logo Title Text 1")   
 ![alt text](screens/privateChat.png "Logo Title Text 1")    
+For learning how a the UDP works, according to lessons on codeproject, the Udp chat was mad, it is also a solution with 2 projects, one for the server and the second for the client.  
 Here is how UdpChat is looking:  
 ![alt text](screens/udpChat.PNG "Logo Title Text 1") 
 
