@@ -28,9 +28,11 @@ namespace Client
             _socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         }
 
+        private EndPoint _endPoint;
         public void Connect(string ip, int port)
         {
             var endPoint = new IPEndPoint(IPAddress.Parse(ip), port);
+            _endPoint = endPoint;
             _socket.BeginConnect(endPoint, ConnectCallback, _socket);
         }
 
@@ -42,11 +44,11 @@ namespace Client
 
         void ConnectCallback(IAsyncResult ar)
         {
-            _socket.EndConnect(ar);
+            //_socket.EndConnect(ar);
             _isConnected = true;
             Connected(this, EventArgs.Empty);
             var buffer = new byte[_socket.ReceiveBufferSize];
-            _socket.BeginReceive(buffer, 0, buffer.Length, SocketFlags.None, ReadCallback, buffer);
+            _socket.BeginReceiveFrom(buffer, 0, buffer.Length, SocketFlags.None,ref _endPoint, ReadCallback, buffer);
         }
 
         void ReadCallback(IAsyncResult asyncResult)
