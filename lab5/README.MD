@@ -24,3 +24,8 @@ Let's talk about the process when admin sends a message, we make a for loop to i
 Here is how UdpChat is looking:  
 ![alt text](screens/udpChat.PNG "Logo Title Text 1") 
 
+
+
+Bibliography:  
+https://www.codeproject.com/Articles/16935/A-Chat-Application-Using-Asynchronous-UDP-sockets
+
